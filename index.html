@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title data-i18n="pageTitle">Lenzo - Advanced Optical Measurements</title>
+    <meta name="description"
+        content="Professional optical measurement solution for fitting heights, PD, and lens parameters. Precision for lens manufacturers and optical stores.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/logo.svg" alt="Lenzo Logo"
+                    onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIiAvPjxwYXRoIGQ9Ik0xMiA4djhNMCAxMmgyNCIgLz48L3N2Zz4='">
+            </a>
+            <div class="nav-links">
+                <a href="#features" data-i18n="navFeatures">Features</a>
+                <a href="#measurements" data-i18n="navMeasurements">Measurements</a>
+                <a href="#solutions" data-i18n="navSolutions">Solutions</a>
+                <a href="#download" class="text-red" data-i18n="navDownload">Download</a>
+                <button id="langToggle" class="btn-lang">العربية</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="section hero">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-content fade-in">
+            <h1 data-i18n="heroTitle">Precision Optical Measurements <br><span class="text-gradient"
+                    data-i18n="heroTitleHighlight">Redefined</span></h1>
+
+            <p data-i18n="heroSubtitle">A medical-grade mobile solution for precise lens fitting parameters.Secure.
+                Automated.
+                Enterprise-ready.</p>
+            <div class="hero-actions">
+                <a href="#download" class="btn btn-primary" data-i18n="btnDownloadAndroid">Download for Android</a>
+                <a href="#contact" class="btn btn-secondary" data-i18n="btnContact">Contact Us</a>
+            </div>
+
+            <div class="showcase-carousel fade-in" style="margin-top: 4rem; padding-top: 0;">
+                <div class="screen-frame">
+                    <img src="images/home_screenshot.png" alt="Home Screen">
+                </div>
+                <div class="screen-frame">
+                    <img src="images/new_measurement_screenshot.png" alt="Measurement Screen">
+                </div>
+                <div class="screen-frame">
+                    <img src="images/request_in_progrees_screenshot.png" alt="Request in Progress">
+                </div>
+                <div class="screen-frame">
+                    <img src="images/save_measurement_screenshot.png" alt="Save Measurement">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="fade-in" data-i18n="featuresTitle">Core Capabilities</h2>
+            <div class="features-grid">
+                <div class="glass-card fade-in">
+                    <div class="feature-icon">◉</div>
+                    <h3 data-i18n="feature1Title">Automated Scanning</h3>
+                    <p data-i18n="feature1Desc">Instant face detection and parameter extraction using advanced depth
+                        sensing and AI.</p>
+                </div>
+                <div class="glass-card fade-in">
+                    <div class="feature-icon">🔒</div>
+                    <h3 data-i18n="feature2Title">Secure Authorization</h3>
+                    <p data-i18n="feature2Desc">Enterprise-grade security with device authorization and encrypted data
+                        transmission.</p>
+                </div>
+                <div class="glass-card fade-in">
+                    <div class="feature-icon">⚡</div>
+                    <h3 data-i18n="feature3Title">Medical Accuracy</h3>
+                    <p data-i18n="feature3Desc">Validated against industry standards to ensure precise centration and
+                        fitting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Measurements Section -->
+    <section id="measurements" class="section">
+        <div class="container">
+            <h2 class="fade-in" data-i18n="measurementsTitle">Comprehensive Optical Data</h2>
+            <p class="fade-in" style="max-width: 600px;" data-i18n="measurementsSubtitle">Get a complete set of
+                measurements required for advanced
+                progressive and single vision lens fitting.</p>
+
+            <div class="measurements-container fade-in">
+                <div class="measurement-item">
+                    <h4 data-i18n="measPD">Pupillary Distance (PD)</h4>
+                    <p data-i18n="measPDDesc">Monocular Left & Right PD measurements for precise optical centration.</p>
+                </div>
+                <div class="measurement-item">
+                    <h4 data-i18n="measHeight">Fitting Heights</h4>
+                    <p data-i18n="measHeightDesc">Vertical height from the pupil center to the bottom of the lens.</p>
+                </div>
+                <div class="measurement-item">
+                    <h4 data-i18n="measNearPD">Near PD</h4>
+                    <p data-i18n="measNearPDDesc">Pupillary distance calculated for reading / near vision tasks.</p>
+                </div>
+                <div class="measurement-item">
+                    <h4 data-i18n="measVertex">Vertex Distance</h4>
+                    <p data-i18n="measVertexDesc">Distance between the back surface of the lens and the apex of the
+                        cornea.</p>
+                </div>
+                <div class="measurement-item">
+                    <h4 data-i18n="measPanto">Pantoscopic Angle</h4>
+                    <p data-i18n="measPantoDesc">The angle of inclination of the frame front relative to the face.</p>
+                </div>
+                <div class="measurement-item">
+                    <h4 data-i18n="measWrap">Wrap Angle</h4>
+                    <p data-i18n="measWrapDesc">Curvature of the frame front, essential for high-base curve lenses.</p>
+                </div>
+                <div class="measurement-item">
+                    <h4 data-i18n="measFrame">Frame Dimensions</h4>
+                    <p data-i18n="measFrameDesc">A-Box (Width) and B-Box (Height) dimensions of the lens shape.</p>
+                </div>
+                <div class="measurement-item">
+                    <h4 data-i18n="measDBL">Distance Between Lenses (DBL)</h4>
+                    <p data-i18n="measDBLDesc">Bridge width measurement between the two lenses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Business Solutions -->
+    <section id="solutions" class="section" style="background: rgba(255,15,15,0.02);">
+        <div class="container">
+            <div class="business-grid">
+
+                <div class="fade-in">
+                    <h2 data-i18n="businessTitle">For Lens Manufacturers</h2>
+                    <p data-i18n="businessDesc">Deploy Lenzo as your own branded solution. We offer full white-label
+                        capabilities to match your
+                        corporate identity.</p>
+                    <ul style="margin-bottom: 2rem;">
+                        <li style="margin-bottom: 10px; color: var(--text-secondary);" data-i18n="businessFeature1">✓
+                            Custom Logo & Brand Colors</li>
+                        <li style="margin-bottom: 10px; color: var(--text-secondary);" data-i18n="businessFeature2">✓
+                            API Integration with LMS</li>
+                        <li style="margin-bottom: 10px; color: var(--text-secondary);" data-i18n="businessFeature3">✓
+                            Dedicated Support</li>
+                    </ul>
+                    <a href="mailto:sales@lenzo.com" class="btn btn-secondary" data-i18n="btnContactSales">Contact
+                        Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optics Stores Section -->
+    <section id="stores" class="section">
+        <div class="container">
+            <div class="business-grid">
+                <div class="fade-in">
+                    <h2 data-i18n="retailTitle">For Optical Retailers</h2>
+                    <p data-i18n="retailDesc">Modernize your dispensing process. Lenzo turns your iPad or iPhone into a
+                        precision measurement
+                        tool, impressing patients and reducing errors.</p>
+                    <div class="features-grid" style="margin-top: 2rem; grid-template-columns: 1fr;">
+                        <div style="display: flex; gap: 1rem; align-items: start;">
+                            <div style="color: var(--red-primary); font-size: 1.2rem;">★</div>
+                            <div>
+                                <h4 style="font-size: 1rem; margin-bottom: 0.2rem;" data-i18n="retailFeature1Title">
+                                    Premium Patient Experience</h4>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;" data-i18n="retailFeature1Desc">Showcase
+                                    high-tech care with digital
+                                    measurements.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: start;">
+                            <div style="color: var(--red-primary); font-size: 1.2rem;">📉</div>
+                            <div>
+                                <h4 style="font-size: 1rem; margin-bottom: 0.2rem;" data-i18n="retailFeature2Title">
+                                    Reduce Remakes</h4>
+                                <p style="font-size: 0.9rem; margin-bottom: 0;" data-i18n="retailFeature2Desc">Limit
+                                    human error with automated pupil
+                                    center detection.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section id="download" class="section" style="text-align: center;">
+        <div class="container fade-in">
+            <h2 data-i18n="ctaTitle">Ready to Upgrade Your Workflow?</h2>
+            <p data-i18n="ctaSubtitle">Experience the precision of Lenzo today.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; margin-top: 2rem;">
+                <button class="btn btn-primary" data-i18n="btnDownloadAndroid">Download for Android</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>LENZO</h4>
+                    <p style="font-size: 0.9rem;" data-i18n="footerTagline">The standard for optical measurement
+                        precision.</p>
+                </div>
+                <div>
+                    <h4 data-i18n="footerProduct">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features" data-i18n="navFeatures">Features</a></li>
+                        <li><a href="#measurements" data-i18n="navMeasurements">Measurements</a></li>
+                        <li><a href="#solutions" data-i18n="footerWhiteLabel">White Label</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 data-i18n="footerContact">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@lenzo.com">support@lenzo.com</a></li>
+                        <li><a href="mailto:business@lenzo.com">business@lenzo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright" data-i18n="copyright">
+                &copy; 2026 Lenzo Optical Solutions. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
