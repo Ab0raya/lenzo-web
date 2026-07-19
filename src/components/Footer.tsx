@@ -68,7 +68,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSupport }) => {
                 className="flex items-center gap-2 hover:text-[#FF2B2B] transition-colors cursor-pointer"
               >
                 <Mail className="w-4 h-4 text-[#FF2B2B]" />
-                <span>support@lenzo-optics.com</span>
+                <span>mhmdsayed.152005@gmail.com.com</span>
               </button>
             </div>
           </div>
