@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #050505;
+    --bg-surface: #0a0a0a;
+    --brand-red: #ff2b2b;
+    --brand-red-dark: #e53935;
+    --brand-red-glow: rgba(255, 43, 43, 0.4);
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --card-glass: rgba(255, 255, 255, 0.03);
+    --card-glass-hover: rgba(255, 255, 255, 0.06);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  [dir="rtl"] body, [dir="rtl"] {
+    font-family: 'Cairo', sans-serif;
+  }
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 43, 43, 0.35);
+  box-shadow: 0 0 25px rgba(255, 43, 43, 0.15);
+  transform: translateY(-2px);
+}
+
+.glass-card-active {
+  background: rgba(255, 43, 43, 0.06);
+  border-color: rgba(255, 43, 43, 0.5);
+  box-shadow: 0 0 30px rgba(255, 43, 43, 0.2);
+}
+
+/* Glowing Elements & Text Gradients */
+.text-gradient-red {
+  background: linear-gradient(135deg, #ffffff 30%, #ff2b2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-white {
+  background: linear-gradient(180deg, #ffffff 0%, #9ca3af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-red-sm {
+  box-shadow: 0 0 15px rgba(255, 43, 43, 0.35);
+}
+
+.glow-red-md {
+  box-shadow: 0 0 30px rgba(255, 43, 43, 0.45);
+}
+
+.glow-red-lg {
+  box-shadow: 0 0 50px rgba(255, 43, 43, 0.55);
+}
+
+/* Custom Red Radial Background Gradients */
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(255, 43, 43, 0.12) 0%, rgba(5, 5, 5, 0) 70%);
+}
+
+.bg-radial-bottom {
+  background: radial-gradient(circle at 50% 100%, rgba(255, 43, 43, 0.1) 0%, rgba(5, 5, 5, 0) 60%);
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 15px rgba(255, 43, 43, 0.4));
+  }
+  50% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 30px rgba(255, 43, 43, 0.7));
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite;
+}
+
+.animate-scan {
+  animation: scanline 3s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff2b2b;
+}
