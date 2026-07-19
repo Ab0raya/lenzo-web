@@ -12,20 +12,16 @@ import { Modals } from './components/Modals';
 
 export function AppContent() {
   const [downloadOpen, setDownloadOpen] = useState(false);
-  const [adminOpen, setAdminOpen] = useState(false);
   const [supportOpen, setSupportOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#050505] text-white">
       <Navbar
         onOpenDownload={() => setDownloadOpen(true)}
-        onOpenAdmin={() => setAdminOpen(true)}
       />
 
       <main className="flex-grow">
-        <Hero
-          onOpenAdmin={() => setAdminOpen(true)}
-        />
+        <Hero />
         <FeaturesGrid />
         <ReferenceShowcase />
         <ParameterShowcase />
@@ -35,15 +31,12 @@ export function AppContent() {
 
       <Footer
         onOpenSupport={() => setSupportOpen(true)}
-        onOpenAdmin={() => setAdminOpen(true)}
       />
 
       <Modals
         downloadOpen={downloadOpen}
-        adminOpen={adminOpen}
         supportOpen={supportOpen}
         onCloseDownload={() => setDownloadOpen(false)}
-        onCloseAdmin={() => setAdminOpen(false)}
         onCloseSupport={() => setSupportOpen(false)}
       />
     </div>

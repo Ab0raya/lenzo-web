@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Globe, Download, Menu, X, ShieldCheck } from 'lucide-react';
+import { Globe, Download, Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   onOpenDownload: () => void;
-  onOpenAdmin: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, onOpenAdmin }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload }) => {
   const { t, toggleLanguage, language } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
     { name: t.nav.features, href: '#features' },
-    { name: '3D Reference', href: '#reference' },
+    { name: t.nav.reference3d, href: '#reference' },
     { name: t.nav.metrics, href: '#metrics' },
     { name: t.nav.howItWorks, href: '#how-it-works' },
     { name: t.nav.download, href: '#download' },
@@ -75,15 +74,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, onOpenAdmin }) =
               </span>
             </button>
 
-            {/* Request Admin secondary button */}
-            <button
-              onClick={onOpenAdmin}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:border-white/20 transition-all duration-300 text-xs font-semibold cursor-pointer"
-            >
-              <ShieldCheck className="w-4 h-4 text-gray-400" />
-              <span>{t.hero.secondaryCta}</span>
-            </button>
-
             {/* Neon Red CTA Download */}
             <button
               onClick={onOpenDownload}
@@ -135,17 +125,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, onOpenAdmin }) =
           </nav>
 
           <div className="flex flex-col gap-3 pt-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenAdmin();
-              }}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-white/5 border border-white/10 text-white font-medium text-sm"
-            >
-              <ShieldCheck className="w-4 h-4 text-[#FF2B2B]" />
-              <span>{t.hero.secondaryCta}</span>
-            </button>
-
             <button
               onClick={() => {
                 setMobileMenuOpen(false);

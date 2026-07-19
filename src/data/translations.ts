@@ -4,6 +4,7 @@ export const APK_DOWNLOAD_URL = 'https://github.com/Ab0raya/lenzo-web/releases/d
 export interface TranslationStructure {
   nav: {
     features: string;
+    reference3d: string;
     metrics: string;
     howItWorks: string;
     download: string;
@@ -18,7 +19,6 @@ export interface TranslationStructure {
     titleEnd: string;
     subtitle: string;
     primaryCta: string;
-    secondaryCta: string;
     stats: {
       precisionLabel: string;
       precisionVal: string;
@@ -44,6 +44,26 @@ export interface TranslationStructure {
     realignBtn: string;
     exportPdf: string;
     simulatingMsg: string;
+  };
+  reference: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    cadTitle: string;
+    cadSubtitle: string;
+    wireframeBtn: string;
+    spinBtn: string;
+    dragInstructions: string;
+    scaleRef: string;
+    mappingTitle: string;
+    mappingSubtitle: string;
+    mappingDesc: string;
+    clipDesignTitle: string;
+    clipDesignDesc: string;
+    dualPhaseTitle: string;
+    dualPhaseDesc: string;
+    printableTitle: string;
+    printableDesc: string;
   };
   features: {
     sectionTitle: string;
@@ -117,13 +137,7 @@ export interface TranslationStructure {
   modals: {
     downloadTitle: string;
     downloadSubtitle: string;
-    adminTitle: string;
-    adminSubtitle: string;
-    nameLabel: string;
     emailLabel: string;
-    clinicLabel: string;
-    submitBtn: string;
-    cancelBtn: string;
     supportTitle: string;
     supportSubtitle: string;
     messageLabel: string;
@@ -146,6 +160,7 @@ export const translations: Record<Language, TranslationStructure> = {
   en: {
     nav: {
       features: 'Features',
+      reference3d: '3D Reference',
       metrics: 'Optical Metrics',
       howItWorks: 'How It Works',
       download: 'Download APK',
@@ -160,7 +175,6 @@ export const translations: Record<Language, TranslationStructure> = {
       titleEnd: '',
       subtitle: 'The ultimate Android digital tool for opticians to accurately capture Pupillary Distance, Fitting Heights, Pantoscopic Angles, and Frame Parameters in seconds.',
       primaryCta: 'Download LENZO (Android APK)',
-      secondaryCta: 'Request Admin Access',
       stats: {
         precisionLabel: 'Sub-millimeter Precision',
         precisionVal: '0.1 mm',
@@ -186,6 +200,26 @@ export const translations: Record<Language, TranslationStructure> = {
       realignBtn: 'Reset Reference Points',
       exportPdf: 'Generate PDF Report',
       simulatingMsg: 'Drag crosshairs or toggle view phases to inspect real-time optical calculations.',
+    },
+    reference: {
+      badge: '3D CAD Reference Hardware',
+      title: 'Precision 3D Frame Calibration Reference',
+      subtitle: 'The LENZO hardware reference clip attaches seamlessly above customer spectacle frames, establishing an absolute physical baseline for 0.1mm optical accuracy.',
+      cadTitle: 'LENZO 3D Frame Reference Clip Model',
+      cadSubtitle: 'Interactive WebGL CAD Geometry • STL Scale Calibrator',
+      wireframeBtn: 'Wireframe Mode',
+      spinBtn: 'Auto Spin',
+      dragInstructions: 'Drag mouse to 3D rotate clip • Scroll to zoom',
+      scaleRef: 'Scale Ref: 80.00 mm',
+      mappingTitle: 'Sub-Millimeter Pixel-to-mm Mapping',
+      mappingSubtitle: 'Computer Vision Scale Calibration',
+      mappingDesc: 'By detecting the 80.0mm physical reference targets on the 3D clip, LENZO dynamically corrects for camera distance, lens distortion, and perspective angle variations.',
+      clipDesignTitle: 'Universal Frame Clip Design',
+      clipDesignDesc: 'Compatible with acetate, metal wire, and rimless frame bridges without scratching spectacle coatings.',
+      dualPhaseTitle: 'Dual-Phase Marker Alignment',
+      dualPhaseDesc: 'Enables automated crosshair lock for Phase A (Frontal PD/FH) and Phase B (Side Profile Vertex Distance/Panto Angle).',
+      printableTitle: '3D Printable & Durable Structure',
+      printableDesc: 'Lightweight high-contrast polymer structure designed for lab 3D printing or direct clinic supply ordering.',
     },
     features: {
       sectionTitle: 'Next-Generation Optical Features',
@@ -259,13 +293,7 @@ export const translations: Record<Language, TranslationStructure> = {
     modals: {
       downloadTitle: 'Download LENZO Android App',
       downloadSubtitle: 'Download the official APK build directly or scan the QR code using your Android tablet.',
-      adminTitle: 'Request Admin Access',
-      adminSubtitle: 'Fill in your optical clinic credentials to request instant admin activation.',
-      nameLabel: 'Full Name / Practitioner',
       emailLabel: 'Work Email Address',
-      clinicLabel: 'Clinic / Optical Store Name',
-      submitBtn: 'Submit Request',
-      cancelBtn: 'Cancel',
       supportTitle: 'Contact Lab Support',
       supportSubtitle: 'Send a direct message to our optical software engineering team.',
       messageLabel: 'Your Message or Request',
@@ -286,6 +314,7 @@ export const translations: Record<Language, TranslationStructure> = {
   ar: {
     nav: {
       features: 'المميزات',
+      reference3d: 'قطعة المعايرة ثلاثية الأبعاد',
       metrics: 'القياسات البصرية',
       howItWorks: 'كيف يعمل',
       download: 'تحميل APK',
@@ -300,7 +329,6 @@ export const translations: Record<Language, TranslationStructure> = {
       titleEnd: '',
       subtitle: 'التطبيق الرقمي المخصص لأجهزة الأندرويد لأخصائيي النظارات وقياس البصر لالتقاط المسافة بين الحدقتين، ارتفاع المركز البصري، والزوايا البصرية.',
       primaryCta: 'تحميل LENZO (ملف APK للأندرويد)',
-      secondaryCta: 'طلب صلاحيات المسؤول',
       stats: {
         precisionLabel: 'دقة فائقة أقل من مليمتر',
         precisionVal: '0.1 مم',
@@ -326,6 +354,26 @@ export const translations: Record<Language, TranslationStructure> = {
       realignBtn: 'إعادة ضبط نقاط المرجعية',
       exportPdf: 'تصدير تقرير PDF',
       simulatingMsg: 'اسحب مصلبات التوجيه أو بدل مرحلة المحاذاة لمشاهدة الحسابات البصرية المباشرة.',
+    },
+    reference: {
+      badge: 'مقطع المعايرة ثلاثي الأبعاد CAD',
+      title: 'مرجع المعايرة ثلاثي الأبعاد لإطار النظارة',
+      subtitle: 'تثبت قطعة المعايرة الخاصة بتطبيق لينزو أعلى إطار نظارة المريض لإنشاء مقياس فيزيائي دقيق يحقق دقة 0.1 مم.',
+      cadTitle: 'نموذج قطعة معايرة لينزو ثلاثي الأبعاد',
+      cadSubtitle: 'مجسم WebGL CAD تفاعلي • معاير المقياس المباشر',
+      wireframeBtn: 'نمط الهيكل (Wireframe)',
+      spinBtn: 'دوران تلقائي',
+      dragInstructions: 'اسحب بالفأرة لتدوير المجسم • استخدم العجلة للتكبير والتصغير',
+      scaleRef: 'مقياس المرجعية: 80.00 مم',
+      mappingTitle: 'تحويل البكسل إلى مليمتر بدقة متناهية',
+      mappingSubtitle: 'معايرة مقياس الرؤية الحاسوبية',
+      mappingDesc: 'من خلال اكتشاف نقاط المرجعية البالغ طولها 80.0 مم على قطعة المعايرة، يقوم تطبيق لينزو بديناميكية بتصحيح مسافة الكاميرا وتشوه العدسة.',
+      clipDesignTitle: 'تصميم مشبك عالمي مرن',
+      clipDesignDesc: 'متوافق مع الإطارات البلاستيكية، المعدنية، والإطارات بدون إطار دون التسبب في أي خدوش.',
+      dualPhaseTitle: 'محاذاة النقاط المرجعية ثنائية المرحلة',
+      dualPhaseDesc: 'يتيح التثبيت التلقائي لمصلبات التوجيه للمرحلة (أ) الأمامية والمرحلة (ب) الجانبية.',
+      printableTitle: 'هيكل متين وقابل للطباعة ثلاثية الأبعاد',
+      printableDesc: 'مصنوع من بوليمر عالي التباين وخفيف الوزن مخصص للطباعة ثلاثية الأبعاد بالمعامل أو الطلب المباشر.',
     },
     features: {
       sectionTitle: 'المميزات البصرية المتقدمة',
@@ -399,13 +447,7 @@ export const translations: Record<Language, TranslationStructure> = {
     modals: {
       downloadTitle: 'تحميل تطبيق LENZO للأندرويد',
       downloadSubtitle: 'حمل ملف APK المباشر أو امسح رمز الاستجابة السريعة (QR) باستخدام جهاز الأندرويد.',
-      adminTitle: 'طلب صلاحيات مسؤول النظام',
-      adminSubtitle: 'أدخل بيانات مركز النظارات للحصول على رمز التفعيل والدخول للوحة التحكم.',
-      nameLabel: 'الاسم الكامل / الأخصائي',
       emailLabel: 'البريد الإلكتروني للعمل',
-      clinicLabel: 'اسم مركز النظارات / العيادة',
-      submitBtn: 'إرسال الطلب',
-      cancelBtn: 'إلغاء',
       supportTitle: 'التواصل مع الدعم الفني',
       supportSubtitle: 'أرسل رسالة مباشرة إلى فريق مهندسي البرمجيات البصرية.',
       messageLabel: 'نص الرسالة أو الاستفسار',

@@ -2,13 +2,9 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { APK_DOWNLOAD_URL } from '../data/translations';
 import { OpticalSimulator } from './OpticalSimulator';
-import { Download, ShieldCheck, Sparkles, Activity, Gauge, CheckCircle } from 'lucide-react';
+import { Download, Sparkles, Activity, Gauge, CheckCircle } from 'lucide-react';
 
-interface HeroProps {
-  onOpenAdmin: () => void;
-}
-
-export const Hero: React.FC<HeroProps> = ({ onOpenAdmin }) => {
+export const Hero: React.FC = () => {
   const { t } = useLanguage();
 
   return (
@@ -41,28 +37,19 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAdmin }) => {
             {t.hero.subtitle}
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          {/* CTA Button */}
+          <div className="flex justify-center pt-4">
             
             {/* Primary Neon Red Download Link */}
             <a
               href={APK_DOWNLOAD_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-[#FF2B2B] via-[#E53935] to-[#FF5252] text-white font-bold text-base shadow-xl shadow-[#FF2B2B]/30 hover:shadow-[#FF2B2B]/50 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer group"
+              className="w-full sm:w-auto px-10 py-4 rounded-xl bg-gradient-to-r from-[#FF2B2B] via-[#E53935] to-[#FF5252] text-white font-bold text-base shadow-xl shadow-[#FF2B2B]/30 hover:shadow-[#FF2B2B]/50 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer group"
             >
               <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
               <span>{t.hero.primaryCta}</span>
             </a>
-
-            {/* Secondary Request Admin Access */}
-            <button
-              onClick={onOpenAdmin}
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-gray-200 hover:text-white font-bold text-base transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer"
-            >
-              <ShieldCheck className="w-5 h-5 text-[#FF2B2B]" />
-              <span>{t.hero.secondaryCta}</span>
-            </button>
 
           </div>
 

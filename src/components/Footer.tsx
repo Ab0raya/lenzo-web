@@ -1,13 +1,12 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Mail, ShieldCheck } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 interface FooterProps {
   onOpenSupport: () => void;
-  onOpenAdmin: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenSupport, onOpenAdmin }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenSupport }) => {
   const { t } = useLanguage();
 
   return (
@@ -44,6 +43,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSupport, onOpenAdmin }) =>
                 <a href="#features" className="hover:text-white transition-colors">{t.nav.features}</a>
               </li>
               <li>
+                <a href="#reference" className="hover:text-white transition-colors">{t.nav.reference3d}</a>
+              </li>
+              <li>
                 <a href="#metrics" className="hover:text-white transition-colors">{t.nav.metrics}</a>
               </li>
               <li>
@@ -55,10 +57,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSupport, onOpenAdmin }) =>
             </ul>
           </div>
 
-          {/* Support & Admin */}
+          {/* Support */}
           <div className="md:col-span-4 space-y-3">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-white">
-              {t.nav.support} & Lab Access
+              {t.nav.support} & Contact
             </h4>
             <div className="space-y-2 text-xs">
               <button
@@ -67,14 +69,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSupport, onOpenAdmin }) =>
               >
                 <Mail className="w-4 h-4 text-[#FF2B2B]" />
                 <span>support@lenzo-optics.com</span>
-              </button>
-
-              <button
-                onClick={onOpenAdmin}
-                className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer pt-1"
-              >
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>{t.hero.secondaryCta}</span>
               </button>
             </div>
           </div>
