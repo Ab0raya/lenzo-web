@@ -92,6 +92,7 @@ export const ThreeDViewer: React.FC<ThreeDViewerProps> = ({ stlUrl = '/frame_ref
         // Scaled up larger so it's prominent and clear
         mesh.scale.set(1.4, 1.4, 1.4);
         mesh.rotation.x = -Math.PI / 2; // Upright orientation
+        mesh.position.set(0, 6, 14); // Elevated in +Z dimension & +Y vertical offset
         meshRef.current = mesh;
 
         // Add Glowing Red Calibration Markers on reference endpoints
