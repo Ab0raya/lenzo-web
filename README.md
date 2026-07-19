@@ -40,7 +40,7 @@ LENZO is a state-of-the-art web application and landing page designed for **LENZ
 - Includes clinical explanations, typical reference ranges, and interactive SVG diagrams.
 
 ### 📱 Exclusive Android APK Download Hub
-- Direct **Android APK Package (v2.4.1)** installer download.
+- Direct **[Android APK Download Package (lenzo.apk)](https://github.com/Ab0raya/lenzo-web/releases/download/lenzo-apk/lenzo.apk)**.
 - Interactive Android tablet QR code scanner preview.
 - Hardware recommendations card for Android tablets and smartphones (Android 8.0+, 3GB RAM, 12MP Camera).
 

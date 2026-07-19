@@ -1,14 +1,14 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { APK_DOWNLOAD_URL } from '../data/translations';
 import { OpticalSimulator } from './OpticalSimulator';
 import { Download, ShieldCheck, Sparkles, Activity, Gauge, CheckCircle } from 'lucide-react';
 
 interface HeroProps {
-  onOpenDownload: () => void;
   onOpenAdmin: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenDownload, onOpenAdmin }) => {
+export const Hero: React.FC<HeroProps> = ({ onOpenAdmin }) => {
   const { t } = useLanguage();
 
   return (
@@ -44,14 +44,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenDownload, onOpenAdmin }) => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             
-            {/* Primary Neon Red Download */}
-            <button
-              onClick={onOpenDownload}
+            {/* Primary Neon Red Download Link */}
+            <a
+              href={APK_DOWNLOAD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-[#FF2B2B] via-[#E53935] to-[#FF5252] text-white font-bold text-base shadow-xl shadow-[#FF2B2B]/30 hover:shadow-[#FF2B2B]/50 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer group"
             >
               <Download className="w-5 h-5 group-hover:translate-y-0.5 transition-transform" />
               <span>{t.hero.primaryCta}</span>
-            </button>
+            </a>
 
             {/* Secondary Request Admin Access */}
             <button

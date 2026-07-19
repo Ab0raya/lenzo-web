@@ -23,7 +23,6 @@ export function AppContent() {
 
       <main className="flex-grow">
         <Hero
-          onOpenDownload={() => setDownloadOpen(true)}
           onOpenAdmin={() => setAdminOpen(true)}
         />
         <FeaturesGrid />

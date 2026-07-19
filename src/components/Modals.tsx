@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { APK_DOWNLOAD_URL } from '../data/translations';
 import { X, Download, ShieldCheck, QrCode, CheckCircle, Send, Smartphone } from 'lucide-react';
 
 interface ModalsProps {
@@ -66,19 +67,21 @@ export const Modals: React.FC<ModalsProps> = ({
 
             {/* Exclusive Android Direct Download */}
             <div className="space-y-3">
-              <button
-                onClick={() => alert('Downloading LENZO-Android-v2.4.1.apk...')}
+              <a
+                href={APK_DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full p-5 rounded-2xl bg-gradient-to-r from-[#FF2B2B] via-[#E53935] to-[#FF5252] text-white font-extrabold text-sm flex items-center justify-between shadow-xl shadow-[#FF2B2B]/40 cursor-pointer hover:opacity-95 transition-opacity"
               >
                 <div className="flex items-center gap-3.5">
                   <Smartphone className="w-6 h-6" />
                   <div className="text-left">
                     <span className="block font-black text-base">Download LENZO Android APK (v2.4.1)</span>
-                    <span className="text-xs text-white/90 font-mono">68.4 MB • Official Direct Android Package</span>
+                    <span className="text-xs text-white/90 font-mono">68.4 MB • Official Direct Release</span>
                   </div>
                 </div>
                 <Download className="w-6 h-6 animate-bounce" />
-              </button>
+              </a>
             </div>
 
             {/* Simulated QR Code Scan */}

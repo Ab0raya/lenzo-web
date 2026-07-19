@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { APK_DOWNLOAD_URL } from '../data/translations';
 import { Download, Tablet, Smartphone, Cpu, CheckCircle2, ShieldCheck, Sparkles } from 'lucide-react';
 
 interface DownloadSectionProps {
@@ -46,13 +47,15 @@ export const DownloadSection: React.FC<DownloadSectionProps> = ({ onOpenDownload
               <p className="text-sm text-gray-400 mb-6">{t.download.androidDesc}</p>
             </div>
 
-            <button
-              onClick={onOpenDownload}
+            <a
+              href={APK_DOWNLOAD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full py-4 rounded-xl bg-gradient-to-r from-[#FF2B2B] via-[#E53935] to-[#FF5252] hover:opacity-95 text-white font-extrabold text-sm shadow-xl shadow-[#FF2B2B]/30 flex items-center justify-center gap-2 transition-all cursor-pointer"
             >
               <Download className="w-5 h-5" />
               <span>{t.download.androidBtn}</span>
-            </button>
+            </a>
           </div>
 
           {/* Android Tablet Optimized */}
