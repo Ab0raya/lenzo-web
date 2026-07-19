@@ -3,6 +3,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { FeaturesGrid } from './components/FeaturesGrid';
+import { ReferenceShowcase } from './components/ReferenceShowcase';
 import { ParameterShowcase } from './components/ParameterShowcase';
 import { HowItWorks } from './components/HowItWorks';
 import { DownloadSection } from './components/DownloadSection';
@@ -26,6 +27,7 @@ export function AppContent() {
           onOpenAdmin={() => setAdminOpen(true)}
         />
         <FeaturesGrid />
+        <ReferenceShowcase />
         <ParameterShowcase />
         <HowItWorks />
         <DownloadSection onOpenDownload={() => setDownloadOpen(true)} />

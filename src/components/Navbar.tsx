@@ -13,6 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDownload, onOpenAdmin }) =
 
   const navLinks = [
     { name: t.nav.features, href: '#features' },
+    { name: '3D Reference', href: '#reference' },
     { name: t.nav.metrics, href: '#metrics' },
     { name: t.nav.howItWorks, href: '#how-it-works' },
     { name: t.nav.download, href: '#download' },
