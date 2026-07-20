@@ -55,8 +55,7 @@ export const Modals: React.FC<ModalsProps> = ({
             <div className="space-y-3">
               <a
                 href={APK_DOWNLOAD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="lenzo.apk"
                 className="w-full p-5 rounded-2xl bg-gradient-to-r from-[#FF2B2B] via-[#E53935] to-[#FF5252] text-white font-extrabold text-sm flex items-center justify-between shadow-xl shadow-[#FF2B2B]/40 cursor-pointer hover:opacity-95 transition-opacity"
               >
                 <div className="flex items-center gap-3.5">

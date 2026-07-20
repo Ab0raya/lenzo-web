@@ -49,8 +49,7 @@ export const DownloadSection: React.FC<DownloadSectionProps> = ({ onOpenDownload
 
             <a
               href={APK_DOWNLOAD_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              download="lenzo.apk"
               className="w-full py-4 rounded-xl bg-gradient-to-r from-[#FF2B2B] via-[#E53935] to-[#FF5252] hover:opacity-95 text-white font-extrabold text-sm shadow-xl shadow-[#FF2B2B]/30 flex items-center justify-center gap-2 transition-all cursor-pointer"
             >
               <Download className="w-5 h-5" />
