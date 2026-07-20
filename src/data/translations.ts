@@ -1,5 +1,5 @@
 export type Language = 'en' | 'ar';
-export const APK_DOWNLOAD_URL = '/lenzo.apk';
+export const APK_DOWNLOAD_URL = 'https://github.com/Ab0raya/lenzo-web/releases/download/lenzo-apk/lenzo.apk';
 
 export interface TranslationStructure {
   nav: {
